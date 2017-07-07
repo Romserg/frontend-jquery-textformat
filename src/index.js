@@ -17,5 +17,5 @@ function cleanOutput(){
     ouputText.text('');
 }
 
-inputText.on('keyup', formatText);
+inputText.on('input', formatText);
 formattedText.on('reset', cleanOutput);
