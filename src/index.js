@@ -2,8 +2,8 @@
 
         
 var inputText = $('form.message-form .message-field');
-var ouputText = $('main > .message-formatted');
-var formattedText = $('main > .message-form');
+var ouputText = $('output.message-formatted');
+var formattedText = $('form.message-form');
 
 function formatText(){
          ouputText.text(
@@ -13,9 +13,9 @@ function formatText(){
                   .replace(/\s+/g, ' '));
 }
 
-// function cleanOutput(){
-//     ouputText.text('');
-// }
+function cleanOutput(){
+    ouputText.text('');
+}
 
 inputText.on('keyup', formatText);
 formattedText.on('reset', cleanOutput);
